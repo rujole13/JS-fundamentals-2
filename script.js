@@ -108,7 +108,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1950, "Mike"));
-*/
+
 
 const friends = [`Michael`, `Steven`, `Peter`];
 console.log(friends);
@@ -147,3 +147,73 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+
+// Add elements to end
+const friends = [`Michael`, `Steven`, `Peter`];
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+// Add elements to beginning
+friends.unshift("John");
+console.log(friends);
+
+// Remove elements
+friends.pop(); // Last element
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First element
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+
+if (friends.includes("Steven")) {
+  console.log(`You have a friend named Steven`);
+}
+*/
+
+// Key value pairs (dictionaries)
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends"
+);
+console.log(jonas[interestedIn]);
+
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    `Wrong request! Choose between firstName, lastName, age, job and friends`
+  );
+}
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschmedtman";
+console.log(jonas);
+
+// Challenge
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
