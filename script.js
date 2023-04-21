@@ -176,7 +176,6 @@ console.log(friends.includes("Bob"));
 if (friends.includes("Steven")) {
   console.log(`You have a friend named Steven`);
 }
-*/
 
 // Key value pairs (dictionaries)
 
@@ -198,17 +197,17 @@ console.log(jonas["last" + nameKey]);
 
 const interestedIn = prompt(
   "What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends"
-);
-console.log(jonas[interestedIn]);
-
-if (jonas[interestedIn]) {
-  console.log(jonas[interestedIn]);
-} else {
-  console.log(
-    `Wrong request! Choose between firstName, lastName, age, job and friends`
   );
-}
-
+  console.log(jonas[interestedIn]);
+  
+  if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+  } else {
+    console.log(
+      `Wrong request! Choose between firstName, lastName, age, job and friends`
+      );
+    }
+    
 jonas.location = "Portugal";
 jonas["twitter"] = "@jonasschmedtman";
 console.log(jonas);
@@ -216,4 +215,43 @@ console.log(jonas);
 // Challenge
 console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
-);
+  );
+  
+  const jonas = {
+    firstName: "Jonas",
+    lastName: "Schmedtmann",
+    birthYear: 1991,
+    job: "teacher",
+    friends: ["Michael", "Peter", "Steven"],
+    hasDriversLicense: false,
+    
+    calcAge: function () {
+      this.age = 2037 - this.birthYear;
+      return this.age;
+    },
+    
+    getSummary: function () {
+      this.summary = `${this.firstName} is a ${this.calcAge()}-year old ${
+        this.job
+      }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+      return this.summary;
+    },
+  };
+  
+  console.log(jonas.calcAge());
+  console.log(jonas.age);
+  console.log(jonas.age);
+  console.log(jonas.age);
+  
+  console.log(jonas.getSummary());
+  console.log(jonas.summary);
+  
+  // Challenge
+  // "Jonas is a 46-year old teacher, and he has a/no driver's license"
+*/
+
+// console.log(`Ligting weights repetition 1 🏋️`);
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Ligting weights repetition ${rep} 🏋️`);
+}
