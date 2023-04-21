@@ -248,10 +248,97 @@ console.log(
   
   // Challenge
   // "Jonas is a 46-year old teacher, and he has a/no driver's license"
+  
+  // console.log(`Ligting weights repetition 1 🏋️`);
+  
+  for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Ligting weights repetition ${rep} 🏋️`);
+  }
+
+
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+  // Reading drom jonas array
+  console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== "string") continue;
+
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "number") break;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------- Starting exercise ${exercise}`);
+  for (let repetition = 1; repetition < 6; repetition++) {
+    console.log(
+      `Exercise ${exercise}: Lifting weight repetition ${repetition} 🏋️`
+    );
+  }
+}
 */
 
-// console.log(`Ligting weights repetition 1 🏋️`);
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Ligting weights repetition ${rep} 🏋️`);
+// }
 
-for (let rep = 1; rep <= 10; rep++) {
-  console.log(`Ligting weights repetition ${rep} 🏋️`);
+let rep = 1;
+while (rep <= 10) {
+  // console.log(`WHILE: Ligting weights repetition ${rep} 🏋️`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+}
+if (dice === 6) {
+  console.log(`You rolled a ${dice}`);
 }
